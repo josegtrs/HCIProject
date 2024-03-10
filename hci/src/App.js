@@ -1,13 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import { HomePage } from './Components/HomePage/HomePage'
-import VotingPage from './Components/VotingPage/VotingPage';
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HomePage } from './Components/HomePage/HomePage';
+import { LetsVote } from './Components/LetsVote/LetsVote';
+
 
 function App() {
   return (
-    <div>
-      <VotingPage/>
-    </div>
+    <Router>
+
+      <Routes>
+        <Route exact path="/" element={<LetsVote />} />
+        <Route path="/homepage" element={<HomePage />} />
+      </Routes>
+
+  </Router>
   );
 }
 

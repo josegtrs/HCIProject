@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import './HomePage.css'
 
-import user_icon from '../Assets/person.png'
-import email_icon from '../Assets/email.png'
-import password_icon from '../Assets/password.png'
 
 export const HomePage = () => {
     const[action, setAction] = useState("Login");
@@ -16,15 +13,12 @@ export const HomePage = () => {
         <div className="inputs">
             {action==="Login"?<div></div>:
             <div className="input">
-                <img src={user_icon} alt="" />
                 <input type="text" placeholder="Name" />
             </div>}
             <div className="input">
-                <img src={email_icon} alt="" />
                 <input type="email" placeholder="Email ID" />
             </div>
             <div className="input">
-                <img src={password_icon} alt="" />
                 <input type="password" placeholder="Password"/>
             </div>
         </div>
