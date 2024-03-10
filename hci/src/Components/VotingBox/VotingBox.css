@@ -1,0 +1,76 @@
+.voting-box {
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px; /* Added margin */
+  }
+  
+  .voting-box-header {
+    background-color: orange;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 25px;
+    text-align: center; /* Center align the title */
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  input[type="radio"] {
+    display: none;
+    
+  }
+  
+  /* Style the custom rectangular radio button */
+  .candidate input[type="radio"] + label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0073CF;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  /* Style the custom rectangular radio button when checked */
+  .candidate input[type="radio"]:checked + label {
+    background-color: #0073CF;
+  }
+
+  .candidate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin: 10px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+
+  .candidate-text {
+    display: flex;
+    align-items: center;
+  }
+  
+  .candidate-square {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0073CF;
+    cursor: pointer;
+  }
+
+  .candidate input[type="radio"]:checked + .candidate-text .candidate-square {
+    background-color: #0073CF;
+  }
+  
+  
+
+  
+
+  
+  
