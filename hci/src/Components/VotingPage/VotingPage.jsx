@@ -1,7 +1,9 @@
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
+import './VotingPage.css';
 
 const VotingPage = () => {
+
   const straightPartyVoting = [
     { id: 1, name: 'Republican' },
     { id: 2, name: 'Libertarian' },
@@ -14,10 +16,15 @@ const VotingPage = () => {
   ];
 
   return (
-    <div>
-      <VotingBox title="Straight Party Voting" candidates={straightPartyVoting} />
-      <VotingBox title="Representative" candidates={representativeCandidates} />
-    </div>
+      <div>
+        <div className='header'>
+        </div>
+        <VotingBox title="Straight Party Voting" candidates={straightPartyVoting} />
+        <VotingBox title="Representative" candidates={representativeCandidates} />
+        <div className='submit-container'>
+          <div className='submit' onClick={()=>{}}>Submit</div>   
+        </div>
+      </div>
   );
 };
 
