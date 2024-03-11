@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import './FinishPage.css'
 
 export const FinishPage = () => {
+
+  const handleletsvote = () => {
+    window.location.href = '/letsvotepage'; // Change the URL to the SignUpPage
+  };
+
   return (
     <div className='container'>
         <div className="header">
@@ -13,7 +18,7 @@ export const FinishPage = () => {
             <div className='dialog'>Please click the button below to return to the home page.</div>
         </div>
         <div className="submit-container">
-            <div className='submit' onClick={()=>{}}>Home Page</div>
+            <div className='submit' onClick={handleletsvote}>Home Page</div>
             
         </div>
     </div>

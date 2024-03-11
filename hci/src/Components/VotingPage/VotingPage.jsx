@@ -2,7 +2,11 @@ import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import './VotingPage.css';
 
-const VotingPage = () => {
+export const VotingPage = () => {
+
+  const handleSubmit = () => {
+    window.location.href = '/finishpage'; // Change the URL to the SignUpPage
+  };
 
   const straightPartyVoting = [
     { id: 1, name: 'Republican' },
@@ -22,10 +26,9 @@ const VotingPage = () => {
         <VotingBox title="Straight Party Voting" candidates={straightPartyVoting} />
         <VotingBox title="Representative" candidates={representativeCandidates} />
         <div className='submit-container'>
-          <div className='submit' onClick={()=>{}}>Submit</div>   
+          <div className='submit' onClick={handleSubmit}>Submit</div>   
         </div>
       </div>
-  );
-};
+  )
+}
 
-export default VotingPage;
