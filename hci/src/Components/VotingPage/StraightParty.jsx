@@ -1,5 +1,6 @@
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
+import ProgressBar from '../ProgressBar/ProgressBar';
 import '../CSS/Global.css'
 
 export const StraightParty = () => {
@@ -17,6 +18,7 @@ export const StraightParty = () => {
 
   return (
       <div>
+        <ProgressBar percentage={10} /> 
         <div className='container'>
         <header className="main-header">
           <h1>STRAIGHT PARTY VOTING</h1>

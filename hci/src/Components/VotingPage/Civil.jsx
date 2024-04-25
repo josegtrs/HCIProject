@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const Civil = () => {
   const [votes, setVotes] = useState({
@@ -73,6 +74,7 @@ export const Civil = () => {
 
   return (
       <div>
+        <ProgressBar percentage={80} /> 
         <div className='container'>
         <header className="main-header">
           <h1>JUDICIAL RETENTION</h1>

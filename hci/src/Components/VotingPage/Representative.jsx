@@ -1,6 +1,7 @@
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const Representative = () => {
 
@@ -15,6 +16,7 @@ export const Representative = () => {
 
   return (
       <div>
+        <ProgressBar percentage={50} /> 
         <div className='container'>
         <header className="main-header">
           <h1>REPRESENTATIVE</h1>

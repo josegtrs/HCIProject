@@ -1,0 +1,26 @@
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the fill doesn't spill outside the border-radius */
+    position: relative; /* Required for positioning the text */
+  }
+  
+  .progress-bar-fill {
+    display: flex;
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+    height: 20px;
+    background-color: #76b5c5;
+    transition: width 0.5s ease-in-out; /* Smooth transition for the fill */
+    border-radius: 8px;
+    color: white; /* Text color */
+    font-weight: bold; /* Make the percentage text bold */
+  }
+  
+  .progress-bar-text {
+    position: absolute; /* Position text over the bar */
+    width: 100%; /* Take full width of the bar */
+    text-align: center; /* Align the text to the center */
+  }
+  
