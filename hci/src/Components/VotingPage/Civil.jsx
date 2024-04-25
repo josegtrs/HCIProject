@@ -37,40 +37,6 @@ export const Civil = () => {
     ],
   };
 
-  const district1office2 = [
-    { id: 1, name: 'YES' },
-    { id: 2, name: 'NO' },
-  ];
-
-  const district2office1 = [
-    { id: 1, name: 'YES' },
-    { id: 2, name: 'NO' },
-  ];
-
-  const district2office2 = [
-    { id: 1, name: 'YES' },
-    { id: 2, name: 'NO' },
-  ];
-
-  // const handleVoteChange = (category, value) => {
-  //   const newVotes = { ...votes, [category]: value };
-  //   setVotes(newVotes);
-  //   localStorage.setItem('votes', JSON.stringify(newVotes)); // Save to local storage
-  // };
-
-  // const handleVoteChange = (title, value) => {
-  //   const newVotes = {
-  //     ...votes,
-  //     [title]: {
-  //       question: questions[title],
-  //       options: options[title].map(opt => opt.name),  // Convert to array of option names
-  //       selected: value
-  //     }
-  //   };
-  //   setVotes(newVotes);
-  //   localStorage.setItem('votes', JSON.stringify(newVotes));
-  // };
-
   const handleVoteChange = (title, value) => {
     console.log('Title:', title);
     console.log('Value:', value);
@@ -114,39 +80,24 @@ export const Civil = () => {
 
         <p className="sub-header">Vote separately on each justice or judge; they are not running against each other. <br></br>For Judges of the Oklahoma Court of Civil Appeals</p>
 
-        {/* <VotingBox 
-            title="DISTRICT 1 - OFFICE 2" 
-            question="Shall JANE P. WISEMAN of the OKLAHOMA COURT OF CIVIL APPEALS be retained in office?"
-            candidates={district1office2}
-            onChange={(value) => handleVoteChange('district1office2', value)} />
         <VotingBox 
-            title="DISTRICT 2 - OFFICE 1" 
-            question="Shall DEBORAH B. BARNES of the OKLAHOMA COURT OF CIVIL APPEALS be retained in office?"
-            candidates={district2office1}
-            onChange={(value) => handleVoteChange('district2office1', value)} />
+          title="DISTRICT 1 - OFFICE 2" 
+          question={questions.district1office2}
+          candidates={options.district1office2}
+          onChange={(value) => handleVoteChange(titlesMap["DISTRICT 1 - OFFICE 2"], value)}
+        />
         <VotingBox 
-            title="DISTRICT 2 - OFFICE 2" 
-            question="Shall KEITH RAPP of the OKLAHOMA COURT OF CIVIL APPEALS be retained in office?"
-            candidates={district2office2}
-            onChange={(value) => handleVoteChange('district2office2', value)} /> */}
-            <VotingBox 
-  title="DISTRICT 1 - OFFICE 2" 
-  question={questions.district1office2}
-  candidates={options.district1office2}
-  onChange={(value) => handleVoteChange(titlesMap["DISTRICT 1 - OFFICE 2"], value)}
-/>
-<VotingBox 
-  title="DISTRICT 2 - OFFICE 1" 
-  question={questions.district2office1}
-  candidates={options.district2office1}
-  onChange={(value) => handleVoteChange(titlesMap["DISTRICT 2 - OFFICE 1"] , value)}
-/>
-<VotingBox 
-  title="DISTRICT 2 - OFFICE 2" 
-  question={questions.district2office2}
-  candidates={options.district2office2}
-  onChange={(value) => handleVoteChange(titlesMap["DISTRICT 2 - OFFICE 2"] , value)}
-/>  
+          title="DISTRICT 2 - OFFICE 1" 
+          question={questions.district2office1}
+          candidates={options.district2office1}
+          onChange={(value) => handleVoteChange(titlesMap["DISTRICT 2 - OFFICE 1"] , value)}
+        />
+        <VotingBox 
+          title="DISTRICT 2 - OFFICE 2" 
+          question={questions.district2office2}
+          candidates={options.district2office2}
+          onChange={(value) => handleVoteChange(titlesMap["DISTRICT 2 - OFFICE 2"] , value)}
+        />  
         <div className='submit-container'>
           <div className={`submit-button ${isSubmitEnabled ? '' : 'disabled'}`} onClick={handleSubmit}>N E X T</div>   
         </div>
@@ -154,75 +105,3 @@ export const Civil = () => {
       </div>
   );
 };
-
-
-// import React from 'react';
-// import VotingBox from '../VotingBox/VotingBox';
-// import '../CSS/Global.css'
-
-// export const Civil = () => {
-
-//   const [votes, setVotes] = useState({
-//     district1office2: null,
-//     district2office1: null,
-//     district2office2: null,
-//   });
-
-//   const handleVoteChange = (category, value) => {
-//     setVotes(prev => ({ ...prev, [category]: value }));
-//   };
-
-//   const handleSubmit = () => {
-//     if (Object.values(votes).every(vote => vote !== null)) {
-//       window.location.href = '/review'; // Change the URL to the Review Page
-//     } else {
-//       alert('Please vote in all categories before proceeding.');
-//     }
-//   };
-
-//   const isSubmitEnabled = Object.values(votes).every(vote => vote !== null);
-
-
-//   const district1office2 = [
-//     { id: 1, name: 'YES' },
-//     { id: 2, name: 'NO'},
-// ];
-
-// const district2office1 = [
-//   { id: 1, name: 'YES' },
-//   { id: 2, name: 'NO'},
-// ];
-// const district2office2 = [
-//   { id: 1, name: 'YES' },
-//   { id: 2, name: 'NO'},
-// ];
-
-//   return (
-//       <div>
-//         <div className='container'>
-//         <header className="main-header">
-//           <h1>JUDICIAL RETENTION</h1>
-//         </header>
-
-//         <p className="sub-header">Vote separately on each justice or judge; they are not running against each other. <br></br>For Judges of the Oklahoma Court of Civil Appeals</p>
-
-//         <VotingBox 
-//             title="DISTRICT 1 - OFFICE 2" 
-//             question="Shall JANE P. WISEMAN of the OKLAHOMA COURT OF CIVIL APPEALS be retained in office?"
-//             candidates={district1office2} />
-//         <VotingBox 
-//             title="DISTRICT 2 - OFFICE 1" 
-//             question="Shall DEBORAH B. BARNES of the OKLAHOMA COURT OF CIVIL APPEALS be retained in office?"
-//             candidates={district2office1} />
-//         <VotingBox 
-//             title="DISTRICT 2 - OFFICE 2" 
-//             question="Shall KEITH RAPP of the OKLAHOMA COURT OF CIVIL APPEALS be retained in office?"
-//             candidates={district2office2} />
-//         <div className='submit-container'>
-//           <div className='submit-button' onClick={handleSubmit}>N E X T</div>   
-//         </div>
-//         </div>
-//       </div>
-//   )
-// }
-

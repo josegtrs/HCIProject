@@ -5,7 +5,6 @@ const titlesMap = {
      "district1office2":"DISTRICT 1 - OFFICE 2",
      "district2office1":"DISTRICT 2 - OFFICE 1",
      "district2office2":"DISTRICT 2 - OFFICE 2"
-    // ... any other titles you have
   };
 
 const ReviewBox = ({ title, question, candidates, onChange, reviewMode, selectedOption }) => {
