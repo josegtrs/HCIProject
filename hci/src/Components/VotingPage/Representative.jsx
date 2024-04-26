@@ -17,9 +17,14 @@ export const Representative = () => {
   const zoomOut = () => {
     setZoomLevel(zoomLevel => zoomLevel - 10);
   }
-
   const handleSubmit = () => {
-    window.location.href = '/judicial'; // Redirect to the next page
+    const representativeChoice = localStorage.getItem('representativeChoice');
+  
+    if (representativeChoice) {
+      window.location.href = '/judicial'; 
+    } else {
+      alert('Please vote in each box before proceeding.');
+    }
   };
 
   const straightPartyVoting = [

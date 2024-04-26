@@ -19,16 +19,22 @@ export const Presidential = () => {
   }
 
   const handleSubmit = () => {
-    window.location.href = '/state'; // Redirect to the next page
+    const presidentialChoice = localStorage.getItem('presidentialChoice');
+  
+    if (presidentialChoice) {
+      window.location.href = '/state'; 
+    } else {
+      alert('Please vote in each box before proceeding.');
+    }
   };
 
   const president = [
-  { id: 1, name: "FOR PRESIDENT AND VICE PRESIDENT: DONALD J. TRUMP & MICHAEL R. PENCE (Republican)" },
-  { id: 2, name: "FOR PRESIDENT AND VICE PRESIDENT: JO JORGENSEN & JEREMY SPIKE COHEN (Libertarian)" },
-  { id: 3, name: "FOR PRESIDENT AND VICE PRESIDENT: JOSEPH R. BIDEN & KAMALA D. HARRIS (Democrat)" },
-  { id: 4, name: "FOR PRESIDENT AND VICE PRESIDENT: JADE SIMMONS & CLAUDELIAH J. ROZE (Independent)" },
-  { id: 5, name: "FOR PRESIDENT AND VICE PRESIDENT: KANYE WEST & MICHELLE TIDBALL (Independent)" },
-  { id: 6, name: "FOR PRESIDENT AND VICE PRESIDENT: BROCK PIERCE & KARLA BALLARD (Independent)" },
+  { id: 1, name: "DONALD J. TRUMP & MICHAEL R. PENCE (Republican)" },
+  { id: 2, name: "JO JORGENSEN & JEREMY SPIKE COHEN (Libertarian)" },
+  { id: 3, name: "JOSEPH R. BIDEN & KAMALA D. HARRIS (Democrat)" },
+  { id: 4, name: "JADE SIMMONS & CLAUDELIAH J. ROZE (Independent)" },
+  { id: 5, name: "KANYE WEST & MICHELLE TIDBALL (Independent)" },
+  { id: 6, name: "BROCK PIERCE & KARLA BALLARD (Independent)" },
 ];
 
 

@@ -19,7 +19,15 @@ export const Judicial = () => {
   }
 
   const handleSubmit = () => {
-    window.location.href = '/criminal'; // Redirect to the next page
+    const district1Choice = localStorage.getItem('judicialRetention_district1');
+    const district6Choice = localStorage.getItem('judicialRetention_district6');
+    const district9Choice = localStorage.getItem('judicialRetention_district9');
+  
+    if (district1Choice && district6Choice && district9Choice) {
+      window.location.href = '/criminal'; 
+    } else {
+      alert('Please vote in each box before proceeding.');
+    }
   };
 
   const district1 = [

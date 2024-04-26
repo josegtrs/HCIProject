@@ -19,9 +19,16 @@ export const Criminal = () => {
   }
   
   const handleSubmit = () => {
-    window.location.href = '/civil'; // Redirect to the next page
+    const district2Choice = localStorage.getItem('criminalRetention_district2');
+    const district3Choice = localStorage.getItem('criminalRetention_district3');
+  
+    if (district2Choice && district3Choice) {
+      window.location.href = '/civil'; 
+    } else {
+      alert('Please vote in each box before proceeding.');
+    }
   };
-
+  
   const district2 = [
     { id: 1, name: 'YES' },
     { id: 2, name: 'NO' },

@@ -19,7 +19,13 @@ export const Congressional = () => {
   }
 
   const handleSubmit = () => {
-    window.location.href = '/representative'; // Redirect to the next page
+    const congressionalOfficerChoice = localStorage.getItem('congressionalOfficerChoice');
+  
+    if (congressionalOfficerChoice) {
+      window.location.href = '/representative'; 
+    } else {
+      alert('Please vote in each box before proceeding.');
+    }
   };
 
   const straightPartyVoting = [

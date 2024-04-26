@@ -19,7 +19,15 @@ export const Civil = () => {
   }
 
   const handleSubmit = () => {
-    window.location.href = '/review'; // Redirect to the next page
+    const district1Office2Choice = localStorage.getItem('civilRetention_district1_office2');
+    const district2Office1Choice = localStorage.getItem('civilRetention_district2_office1');
+    const district2Office2Choice = localStorage.getItem('civilRetention_district2_office2');
+  
+    if (district1Office2Choice && district2Office1Choice && district2Office2Choice) {
+      window.location.href = '/review'; 
+    } else {
+      alert('Please vote in each box before proceeding.');
+    }
   };
 
   const district1office2 = [
