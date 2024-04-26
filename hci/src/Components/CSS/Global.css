@@ -110,18 +110,23 @@ body {
   }
 
 .back-button {
-    position: fixed;
-    top: 25px;
-    left: 10px;
-    padding: 35;
-    font-size: 30px;
-    cursor: pointer;
-    border: none;
-    font-style: bold;
-    background-color: #0073CF;
-    border-radius: 50%;
-    color: black;
-    margin: 10px;
+  position: fixed;
+  top: 25px;
+  left: 10px;
+  padding: 35px; /* Adjust padding to make it a perfect circle */
+  font-size: 16px; /* Reduce font size to match the zoom buttons */
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  background-color: #0073CF;
+  border-radius: 50%;
+  color: black;
+  margin: 10px;
+  background-image: url('../Assets/backbutton.png'); /* Add path to your zoom out icon */
+    background-size: contain; /* Ensure the background image fits within the button */
+    background-size: 60%; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the background image */
 }
 
 .progress-bar {
@@ -129,7 +134,8 @@ body {
     background-color: #e0e0e0;
     border-radius: 8px;
     overflow: hidden; /* Ensures the fill doesn't spill outside the border-radius */
-    position: relative; /* Required for positioning the text */
+    position: fixed; /* Required for positioning the text */
+    z-index: 9999;
   }
   
   .progress-bar-fill {

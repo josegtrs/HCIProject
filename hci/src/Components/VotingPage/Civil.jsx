@@ -45,12 +45,12 @@ export const Civil = () => {
   return (
     <div>
         <ProgressBar percentage={80} /> 
+        <BackButton destination="/criminal" /> 
         <ZoomComponent zoomIn={zoomIn} zoomOut={zoomOut}/>
         <div style={{transform: `scale(${zoomLevel/100})`}} className='container'>
         <header className="main-header">
           <h1>JUDICIAL RETENTION</h1>
         </header>
-        <BackButton destination="/criminal" /> 
         <p className="sub-header">Vote separately on each justice or judge; they are not running against each other. <br></br>For Judges of the Oklahoma Court of Civil Appeals</p>
 
         <VotingBox

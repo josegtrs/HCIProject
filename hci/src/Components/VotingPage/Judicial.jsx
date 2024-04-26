@@ -44,14 +44,14 @@ export const Judicial = () => {
 
   return (
     <div>
-        <ProgressBar percentage={60} /> 
+        <ProgressBar percentage={60} />
+        <BackButton destination="/representative" />  
         <ZoomComponent zoomIn={zoomIn} zoomOut={zoomOut}/>
         <div style={{transform: `scale(${zoomLevel/100})`}} className='container'>
 
         <header className="main-header">
           <h1>JUDICIAL RETENTION</h1>
         </header>
-        <BackButton destination="/representative" /> 
         <p className="sub-header">Vote separately on each justice or judge; they are not running against each other. <br></br>For Justices of the Oklahoma Supreme Court</p>
 
         <VotingBox

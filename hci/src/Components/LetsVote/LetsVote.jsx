@@ -19,7 +19,7 @@ export const LetsVote = () => {
 
 
     const handleHomePageClick = () => {
-        window.location.href = '/straightparty'; // Change the URL to the SignUpPage
+        window.location.href = '/presidential'; // Change the URL to the SignUpPage
     };
 
     return (

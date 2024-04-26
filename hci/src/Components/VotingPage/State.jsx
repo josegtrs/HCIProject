@@ -35,12 +35,12 @@ export const State = () => {
   return (
       <div>
         <ProgressBar percentage={30} /> 
+        <BackButton destination="/presidential" /> 
         <ZoomComponent zoomIn={zoomIn} zoomOut={zoomOut}/>
         <div style={{transform: `scale(${zoomLevel/100})`}} className='container'>
         <header className="main-header">
           <h1>STATE OFFICERS</h1>
         </header>
-        <BackButton destination="/presidential" /> 
         <p className="sub-header">For Corporation Commisioner (Vote for One)</p>
 
         <VotingBox

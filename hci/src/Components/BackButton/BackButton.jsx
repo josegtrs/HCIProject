@@ -10,9 +10,7 @@ const BackButton = ({ destination }) => {
   };
 
   return (
-    <button className="back-button" onClick={handleBack}>
-      &#x2190; 
-      </button>
+    <button className="back-button" onClick={handleBack}></button>
   );
 };
 

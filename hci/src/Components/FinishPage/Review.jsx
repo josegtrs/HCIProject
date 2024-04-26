@@ -3,6 +3,7 @@ import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
 import BackButton from '../BackButton/BackButton';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const Review = () => {
   const handleSubmit = () => {
@@ -27,6 +28,7 @@ export const Review = () => {
 
   return (
     <div>
+      <ProgressBar percentage={90} /> 
       <div className='container'>
         <header className="main-header">
           <h1>REVIEW</h1>
