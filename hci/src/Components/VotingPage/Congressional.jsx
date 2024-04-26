@@ -1,8 +1,20 @@
+import { useState } from 'react';
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
+import ZoomComponent from '../Zoom/ZoomComponent';
 
 export const Congressional = () => {
+
+  const[zoomLevel, setZoomLevel] = useState(100);
+
+  const zoomIn = () => {
+    setZoomLevel(zoomLevel => zoomLevel + 10);
+  }
+
+  const zoomOut = () => {
+    setZoomLevel(zoomLevel => zoomLevel - 10);
+  }
 
   const handleSubmit = () => {
     window.location.href = '/representative'; // Change the URL to the SignUpPage
@@ -21,7 +33,8 @@ export const Congressional = () => {
 
   return (
       <div>
-        <div className='container'>
+        <ZoomComponent zoomIn={zoomIn} zoomOut={zoomOut}/>
+        <div style={{transform: `scale(${zoomLevel/100})`}} className='container'>
         <header className="main-header">
           <h1>CONGRESSIONAL OFFICERS</h1>
         </header>
