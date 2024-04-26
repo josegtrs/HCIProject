@@ -1,7 +1,9 @@
 // Congressional.jsx
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
-import '../CSS/Global.css';
+import '../CSS/Global.css'
+import BackButton from '../BackButton/BackButton';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const Congressional = () => {
   const handleSubmit = () => {
@@ -22,12 +24,13 @@ export const Congressional = () => {
   };
 
   return (
-    <div>
-      <div className='container'>
+      <div>
+        <ProgressBar percentage={40} /> 
+        <div className='container'>
         <header className="main-header">
           <h1>CONGRESSIONAL OFFICERS</h1>
         </header>
-
+        <BackButton destination="/state" /> 
         <p className="sub-header">For United States Senator (Vote for One)</p>
 
         <VotingBox

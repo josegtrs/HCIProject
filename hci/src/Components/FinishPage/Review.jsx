@@ -1,6 +1,8 @@
 // Review.jsx
 import React from 'react';
-import '../CSS/Global.css';
+import VotingBox from '../VotingBox/VotingBox';
+import '../CSS/Global.css'
+import BackButton from '../BackButton/BackButton';
 
 export const Review = () => {
   const handleSubmit = () => {
@@ -30,6 +32,8 @@ export const Review = () => {
           <h1>REVIEW</h1>
         </header>
 
+        <BackButton destination="/civil" /> 
+
         <p className="sub-header">Please double check to verify all selections are correct</p>
 
         {/* Display the user's choice */}
@@ -48,7 +52,6 @@ export const Review = () => {
         <p>District 1 - Office 2: {district1Office2Choice}</p>
         <p>District 2 - Office 1: {district2Office1Choice}</p>
         <p>District 2 - Office 2: {district2Office2Choice}</p>
-
 
 
         <div className='submit-container'>

@@ -1,7 +1,9 @@
 // Judicial.jsx
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
-import '../CSS/Global.css';
+import '../CSS/Global.css'
+import BackButton from '../BackButton/BackButton';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const Judicial = () => {
   const handleSubmit = () => {
@@ -30,12 +32,13 @@ export const Judicial = () => {
 
   return (
     <div>
-      <div className='container'>
+        <ProgressBar percentage={60} /> 
+        <div className='container'>
         <header className="main-header">
           <h1>JUDICIAL RETENTION</h1>
         </header>
-
-        <p className="sub-header">Vote separately on each justice or judge; they are not running against each other.<br />For Justices of the Oklahoma Supreme Court</p>
+        <BackButton destination="/representative" /> 
+        <p className="sub-header">Vote separately on each justice or judge; they are not running against each other. <br></br>For Justices of the Oklahoma Supreme Court</p>
 
         <VotingBox
           title="DISTRICT 1"

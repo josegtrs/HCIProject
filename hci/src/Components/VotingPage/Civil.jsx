@@ -1,7 +1,9 @@
 // Civil.jsx
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
-import '../CSS/Global.css';
+import '../CSS/Global.css'
+import BackButton from '../BackButton/BackButton';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const Civil = () => {
   const handleSubmit = () => {
@@ -29,13 +31,15 @@ export const Civil = () => {
   };
 
   return (
+
     <div>
-      <div className='container'>
+        <ProgressBar percentage={80} /> 
+        <div className='container'>
         <header className="main-header">
           <h1>JUDICIAL RETENTION</h1>
         </header>
-
-        <p className="sub-header">Vote separately on each justice or judge; they are not running against each other.<br />For Judges of the Oklahoma Court of Civil Appeals</p>
+        <BackButton destination="/criminal" /> 
+        <p className="sub-header">Vote separately on each justice or judge; they are not running against each other. <br></br>For Judges of the Oklahoma Court of Civil Appeals</p>
 
         <VotingBox
           title="DISTRICT 1 - OFFICE 2"

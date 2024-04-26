@@ -1,7 +1,9 @@
 // State.jsx
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
-import '../CSS/Global.css';
+import '../CSS/Global.css'
+import BackButton from '../BackButton/BackButton';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const State = () => {
   const handleSubmit = () => {
@@ -19,13 +21,14 @@ export const State = () => {
   };
 
   return (
-    <div>
-      <div className='container'>
+      <div>
+        <ProgressBar percentage={30} /> 
+        <div className='container'>
         <header className="main-header">
           <h1>STATE OFFICERS</h1>
         </header>
-
-        <p className="sub-header">For Corporation Commissioner (Vote for One)</p>
+        <BackButton destination="/presidential" /> 
+        <p className="sub-header">For Corporation Commisioner (Vote for One)</p>
 
         <VotingBox
           title="CORPORATION COMMISSIONER"

@@ -1,7 +1,9 @@
 // Criminal.jsx
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
-import '../CSS/Global.css';
+import '../CSS/Global.css'
+import BackButton from '../BackButton/BackButton';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const Criminal = () => {
   const handleSubmit = () => {
@@ -24,13 +26,15 @@ export const Criminal = () => {
   };
 
   return (
-    <div>
-      <div className='container'>
+
+         <div>
+        <ProgressBar percentage={70} /> 
+        <div className='container'>
         <header className="main-header">
           <h1>JUDICIAL RETENTION</h1>
         </header>
-
-        <p className="sub-header">Vote separately on each justice or judge; they are not running against each other.<br />For Judges of the Oklahoma Court of Criminal Appeals</p>
+        <BackButton destination="/judicial" /> 
+        <p className="sub-header">Vote separately on each justice or judge; they are not running against each other. <br></br>For Judges of the Oklahoma Court of Criminal Appeals</p>
 
         <VotingBox
           title="DISTRICT 2"

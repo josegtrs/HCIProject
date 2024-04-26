@@ -1,6 +1,8 @@
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
+import BackButton from '../BackButton/BackButton';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const StraightParty = () => {
 
@@ -17,11 +19,13 @@ export const StraightParty = () => {
 
   return (
       <div>
+        <ProgressBar percentage={10} /> 
         <div className='container'>
         <header className="main-header">
           <h1>STRAIGHT PARTY VOTING</h1>
         </header>
 
+        <BackButton destination="/letsvotepage" />
         <p className="sub-header">A straight party vote is a vote for all candidates of that party in partisan races.</p>
 
         <VotingBox title="STRAIGHT PARTY" candidates={straightPartyVoting} />
