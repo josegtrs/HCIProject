@@ -2,6 +2,7 @@ import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
 import BackButton from '../BackButton/BackButton';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const Congressional = () => {
 
@@ -22,6 +23,7 @@ export const Congressional = () => {
 
   return (
       <div>
+        <ProgressBar percentage={40} /> 
         <div className='container'>
         <header className="main-header">
           <h1>CONGRESSIONAL OFFICERS</h1>
