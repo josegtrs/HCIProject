@@ -1,3 +1,4 @@
+// Congressional.jsx
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
@@ -5,21 +6,22 @@ import BackButton from '../BackButton/BackButton';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const Congressional = () => {
-
   const handleSubmit = () => {
-    window.location.href = '/representative'; // Change the URL to the SignUpPage
+    window.location.href = '/representative'; // Redirect to the next page
   };
 
   const straightPartyVoting = [
-    { id: 1, name: <span>JIM INHOFE<br />(Republican)</span> },
-    { id: 2, name: <span>ROBERT MURPHY<br />(Libertarian)</span> },
-    { id: 3, name: <span>ABBY BROYLES<br />(Democrat)</span> },
-    { id: 4, name: <span>JOAN FARR<br />(Independent)</span> },
-    { id: 5, name: <span>A. D. NESBIT<br />(Independent)</span> },
+    { id: 1, name: "JIM INHOFE (Republican)" },
+    { id: 2, name: "ROBERT MURPHY (Libertarian)" },
+    { id: 3, name: "ABBY BROYLES (Democrat)" },
+    { id: 4, name: "JOAN FARR (Independent)" },
+    { id: 5, name: "A. D. NESBIT (Independent)" },
+  ];
 
-
-
-];
+  const handleCandidateSelect = (candidateName) => {
+    // Store the user's choice in local storage
+    localStorage.setItem('congressionalOfficerChoice', candidateName);
+  };
 
   return (
       <div>
@@ -31,12 +33,18 @@ export const Congressional = () => {
         <BackButton destination="/state" /> 
         <p className="sub-header">For United States Senator (Vote for One)</p>
 
-        <VotingBox title="SENATOR" candidates={straightPartyVoting} />
+        <VotingBox
+          title="SENATOR"
+          candidates={straightPartyVoting}
+          onCandidateSelect={handleCandidateSelect}
+        />
+
         <div className='submit-container'>
-          <div className='submit-button' onClick={handleSubmit}>N E X T</div>   
-        </div>
+          <div className='submit-button' onClick={handleSubmit}>N E X T</div>
         </div>
       </div>
-  )
-}
+    </div>
+  );
+};
 
+export default Congressional;
