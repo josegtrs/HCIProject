@@ -80,14 +80,13 @@ body {
 .zoom-button {
     padding: 35px; /* Increase padding for larger button size */
     font-size: 16px;
-  margin: 5px; /* Add space between buttons */
+  margin: 10px; /* Add space between buttons */
   cursor: pointer;
   border: none;
   font-weight: bold;
   background-color: #0073CF;
   border-radius: 50%;
   color: white;
-  margin-bottom: 10px; /* Adjust spacing between buttons */
 }
 
 .zoom-button:hover {
@@ -110,4 +109,43 @@ body {
     background-position: center; /* Center the background image */
   }
 
+.back-button {
+    position: fixed;
+    top: 25px;
+    left: 10px;
+    padding: 35;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    font-style: bold;
+    background-color: #0073CF;
+    border-radius: 50%;
+    color: black;
+    margin: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the fill doesn't spill outside the border-radius */
+    position: relative; /* Required for positioning the text */
+  }
   
+  .progress-bar-fill {
+    display: flex;
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+    height: 20px;
+    background-color: orange;
+    transition: width 0.5s ease-in-out; /* Smooth transition for the fill */
+    border-radius: 8px;
+    color: black; /* Text color */
+    font-weight: bold; /* Make the percentage text bold */
+  }
+  
+  .progress-bar-text {
+    position: absolute; /* Position text over the bar */
+    width: 100%; /* Take full width of the bar */
+    text-align: center; /* Align the text to the center */
+  }
