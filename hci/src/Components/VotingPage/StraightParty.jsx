@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
+import ZoomComponent from '../Zoom/ZoomComponent';
 import BackButton from '../BackButton/BackButton';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
+
 export const StraightParty = () => {
+
+  const[zoomLevel, setZoomLevel] = useState(100);
+
+  const zoomIn = () => {
+    setZoomLevel(zoomLevel => zoomLevel + 10);
+  }
+
+  const zoomOut = () => {
+    setZoomLevel(zoomLevel => zoomLevel - 10);
+  }
 
   const handleSubmit = () => {
     window.location.href = '/presidential'; // Change the URL to the SignUpPage
@@ -20,7 +32,9 @@ export const StraightParty = () => {
   return (
       <div>
         <ProgressBar percentage={10} /> 
-        <div className='container'>
+        <ZoomComponent zoomIn={zoomIn} zoomOut={zoomOut}/>
+        <div style={{transform: `scale(${zoomLevel/100})`}} className='container'>
+
         <header className="main-header">
           <h1>STRAIGHT PARTY VOTING</h1>
         </header>

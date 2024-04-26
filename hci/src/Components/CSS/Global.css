@@ -66,18 +66,62 @@ body {
     cursor: pointer;
 }
 
+.submit-button:hover {
+    background-color: #005AA7; /* Change color on hover */
+
+}
+
+.zoom-container {
+  position: fixed;
+  top: 25px;
+  right: 10px;
+}
+
+.zoom-button {
+    padding: 35px; /* Increase padding for larger button size */
+    font-size: 16px;
+  margin: 10px; /* Add space between buttons */
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  background-color: #0073CF;
+  border-radius: 50%;
+  color: white;
+}
+
+.zoom-button:hover {
+  background-color: #005AA7; /* Change color on hover */
+}
+
+.zoom-in {
+    background-image: url('../Assets/zoomin.png'); /* Add path to your zoom in icon */
+    background-size: contain; /* Ensure the background image fits within the button */
+    background-size: 60%; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the background image */
+  }
+  
+  .zoom-out {
+    background-image: url('../Assets/zoomout.png'); /* Add path to your zoom out icon */
+    background-size: contain; /* Ensure the background image fits within the button */
+    background-size: 60%; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the background image */
+  }
+
 .back-button {
     position: fixed;
     top: 25px;
     left: 10px;
-    padding: 10px 15px;
+    padding: 35;
     font-size: 30px;
     cursor: pointer;
     border: none;
     font-style: bold;
     background-color: #0073CF;
-    border-radius: 4px;
-    color: white;
+    border-radius: 50%;
+    color: black;
+    margin: 10px;
 }
 
 .progress-bar {

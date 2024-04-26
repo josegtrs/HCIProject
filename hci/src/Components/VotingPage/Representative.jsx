@@ -1,11 +1,23 @@
-// Representative.jsx
+import { useState } from 'react';
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
+import ZoomComponent from '../Zoom/ZoomComponent';
 import BackButton from '../BackButton/BackButton';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const Representative = () => {
+
+  const[zoomLevel, setZoomLevel] = useState(100);
+
+  const zoomIn = () => {
+    setZoomLevel(zoomLevel => zoomLevel + 10);
+  }
+
+  const zoomOut = () => {
+    setZoomLevel(zoomLevel => zoomLevel - 10);
+  }
+
   const handleSubmit = () => {
     window.location.href = '/judicial'; // Redirect to the next page
   };
@@ -23,7 +35,8 @@ export const Representative = () => {
   return (
       <div>
         <ProgressBar percentage={50} /> 
-        <div className='container'>
+        <ZoomComponent zoomIn={zoomIn} zoomOut={zoomOut}/>
+        <div style={{transform: `scale(${zoomLevel/100})`}} className='container'>
         <header className="main-header">
           <h1>REPRESENTATIVE</h1>
         </header>

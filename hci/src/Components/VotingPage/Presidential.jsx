@@ -1,11 +1,23 @@
-// Presidential.jsx
+import { useState } from 'react';
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
+import ZoomComponent from '../Zoom/ZoomComponent';
 import BackButton from '../BackButton/BackButton';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
 export const Presidential = () => {
+
+  const[zoomLevel, setZoomLevel] = useState(100);
+
+  const zoomIn = () => {
+    setZoomLevel(zoomLevel => zoomLevel + 10);
+  }
+
+  const zoomOut = () => {
+    setZoomLevel(zoomLevel => zoomLevel - 10);
+  }
+
   const handleSubmit = () => {
     window.location.href = '/state'; // Redirect to the next page
   };
@@ -29,7 +41,8 @@ const handleCandidateSelect = (candidateName) => {
 return (
   <div>
         <ProgressBar percentage={20} /> 
-        <div className='container'>
+        <ZoomComponent zoomIn={zoomIn} zoomOut={zoomOut}/>
+        <div style={{transform: `scale(${zoomLevel/100})`}} className='container'>
         <header className="main-header">
           <h1>PRESIDENTIAL</h1>
         </header>
