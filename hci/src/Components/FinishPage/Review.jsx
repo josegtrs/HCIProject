@@ -1,6 +1,7 @@
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
+import BackButton from '../BackButton/BackButton';
 
 export const Review = () => {
 
@@ -20,7 +21,7 @@ export const Review = () => {
         <header className="main-header">
           <h1>REVIEW</h1>
         </header>
-
+        <BackButton destination="/civil" /> 
         <p className="sub-header">Please double check to verify all selections are correct (THIS LAYOUT CAN BE/WILL NEED TO BE CHANGED)</p>
 
         <VotingBox 

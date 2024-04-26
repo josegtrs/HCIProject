@@ -65,3 +65,17 @@ body {
     font-weight: 700;
     cursor: pointer;
 }
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px 15px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    font-style: bold;
+    background-color: #0073CF;
+    border-radius: 4px;
+    color: white;
+}

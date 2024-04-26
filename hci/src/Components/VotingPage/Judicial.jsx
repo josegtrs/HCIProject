@@ -1,6 +1,7 @@
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
+import BackButton from '../BackButton/BackButton';
 
 export const Judicial = () => {
 
@@ -28,7 +29,7 @@ const district9 = [
         <header className="main-header">
           <h1>JUDICIAL RETENTION</h1>
         </header>
-
+        <BackButton destination="/representative" /> 
         <p className="sub-header">Vote separately on each justice or judge; they are not running against each other. <br></br>For Justices of the Oklahoma Supreme Court</p>
 
         <VotingBox 

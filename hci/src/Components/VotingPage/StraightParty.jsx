@@ -1,6 +1,7 @@
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
+import BackButton from '../BackButton/BackButton';
 
 export const StraightParty = () => {
 
@@ -22,6 +23,7 @@ export const StraightParty = () => {
           <h1>STRAIGHT PARTY VOTING</h1>
         </header>
 
+        <BackButton destination="/letsvotepage" />
         <p className="sub-header">A straight party vote is a vote for all candidates of that party in partisan races.</p>
 
         <VotingBox title="STRAIGHT PARTY" candidates={straightPartyVoting} />

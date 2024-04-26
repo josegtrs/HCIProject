@@ -1,6 +1,7 @@
 import React from 'react';
 import VotingBox from '../VotingBox/VotingBox';
 import '../CSS/Global.css'
+import BackButton from '../BackButton/BackButton';
 
 export const Presidential = () => {
 
@@ -24,7 +25,7 @@ export const Presidential = () => {
         <header className="main-header">
           <h1>PRESIDENTIAL</h1>
         </header>
-
+        <BackButton destination="/straightparty" /> 
         <p className="sub-header">Electors for President and Vice President (Vote for one)</p>
 
         <VotingBox title="PRESIDENT AND VICE PRESIDENT" candidates={straightPartyVoting} />
