@@ -65,3 +65,93 @@ body {
     font-weight: 700;
     cursor: pointer;
 }
+
+.submit-button:hover {
+    background-color: #005AA7; /* Change color on hover */
+
+}
+
+.zoom-container {
+  position: fixed;
+  top: 25px;
+  right: 10px;
+}
+
+.zoom-button {
+    padding: 35px; /* Increase padding for larger button size */
+    font-size: 16px;
+  margin: 10px; /* Add space between buttons */
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  background-color: #0073CF;
+  border-radius: 50%;
+  color: white;
+}
+
+.zoom-button:hover {
+  background-color: #005AA7; /* Change color on hover */
+}
+
+.zoom-in {
+    background-image: url('../Assets/zoomin.png'); /* Add path to your zoom in icon */
+    background-size: contain; /* Ensure the background image fits within the button */
+    background-size: 60%; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the background image */
+  }
+  
+  .zoom-out {
+    background-image: url('../Assets/zoomout.png'); /* Add path to your zoom out icon */
+    background-size: contain; /* Ensure the background image fits within the button */
+    background-size: 60%; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the background image */
+  }
+
+.back-button {
+  position: fixed;
+  top: 25px;
+  left: 10px;
+  padding: 35px; /* Adjust padding to make it a perfect circle */
+  font-size: 16px; /* Reduce font size to match the zoom buttons */
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  background-color: #0073CF;
+  border-radius: 50%;
+  color: black;
+  margin: 10px;
+  background-image: url('../Assets/backbutton.png'); /* Add path to your zoom out icon */
+    background-size: contain; /* Ensure the background image fits within the button */
+    background-size: 60%; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the background image */
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the fill doesn't spill outside the border-radius */
+    position: fixed; /* Required for positioning the text */
+    z-index: 9999;
+  }
+  
+  .progress-bar-fill {
+    display: flex;
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+    height: 20px;
+    background-color: orange;
+    transition: width 0.5s ease-in-out; /* Smooth transition for the fill */
+    border-radius: 8px;
+    color: black; /* Text color */
+    font-weight: bold; /* Make the percentage text bold */
+  }
+  
+  .progress-bar-text {
+    position: absolute; /* Position text over the bar */
+    width: 100%; /* Take full width of the bar */
+    text-align: center; /* Align the text to the center */
+  }

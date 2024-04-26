@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import '../CSS/Global.css'
 import logo from '../Assets/OKlogo.jpg'
 
 export const FinishPage = () => {
+  useEffect(() => {
+    // Clear all local data (localStorage)
+    localStorage.clear();
+  }, []);
 
   const handleletsvote = () => {
     window.location.href = '/letsvotepage'; // Change the URL to the SignUpPage
