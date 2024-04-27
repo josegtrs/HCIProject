@@ -12,6 +12,8 @@ import { Judicial } from './Components/VotingPage/Judicial';
 import { Criminal } from './Components/VotingPage/Criminal';
 import { Civil } from './Components/VotingPage/Civil';
 import { Review } from './Components/FinishPage/Review';
+import { Instructions } from './Components/LetsVote/Instructions'
+
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<LetsVote />} />
         <Route path="/letsvotepage" element={<LetsVote />} />
+        <Route path="/instructions" element={<Instructions/>} />
         <Route path="/presidential" element={<Presidential />} />
         <Route path="/finishpage" element={<FinishPage />} />
         <Route path="/state" element={<State />} />
