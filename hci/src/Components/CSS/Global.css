@@ -84,13 +84,13 @@ body {
   cursor: pointer;
   border: none;
   font-weight: bold;
-  background-color: #0073CF;
+  background-color: orange;
   border-radius: 50%;
   color: white;
 }
 
 .zoom-button:hover {
-  background-color: #005AA7; /* Change color on hover */
+  background-color: #c07d00; /* Change color on hover */
 }
 
 .zoom-in {
@@ -118,7 +118,7 @@ body {
   cursor: pointer;
   border: none;
   font-weight: bold;
-  background-color: #0073CF;
+  background-color: orange;
   border-radius: 50%;
   color: black;
   margin: 10px;
@@ -127,6 +127,10 @@ body {
     background-size: 60%; /* Adjust the size of the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center; /* Center the background image */
+}
+
+.back-button:hover {
+  background-color: #c07d00; /* Change color on hover */
 }
 
 .progress-bar {
@@ -143,10 +147,10 @@ body {
     align-items: center; /* Center the text vertically */
     justify-content: center; /* Center the text horizontally */
     height: 20px;
-    background-color: orange;
+    background-color: #0073CF;
     transition: width 0.5s ease-in-out; /* Smooth transition for the fill */
     border-radius: 8px;
-    color: black; /* Text color */
+    color: #e0e0e0; /* Text color */
     font-weight: bold; /* Make the percentage text bold */
   }
   
