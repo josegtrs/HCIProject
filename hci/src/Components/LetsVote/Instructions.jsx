@@ -31,7 +31,7 @@ export const Instructions = () => {
         <ZoomComponent zoomIn={zoomIn} zoomOut={zoomOut}/>
         <div style={{transform: `scale(${zoomLevel/100})`}} className='container'>
                 <header className="main-header">
-          <h1>Instructions</h1>
+          <h1>Guidelines</h1>
         </header>
 
         <div className='instructions-container'>
