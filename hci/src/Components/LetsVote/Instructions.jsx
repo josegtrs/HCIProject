@@ -16,9 +16,13 @@ export const Instructions = () => {
         <p style={{}} className="instruction-sub-header"> Voting </p>
         <p className='instructions'>
             On each page, you will be presented with the name of the office as well as the candidates running for that office.
-            To cast a vote for a candidate, click on the right of the candidate's name. You will only be able to select one candidate per office.<br></br>
+            To cast a vote for a candidate, click on the right of the candidate's name. You will only be able to select one candidate per office.
+        </p>
+        <p className='instructions'>
             Once you have chosen a candidate, click the next button to continue to the next section of the ballot.
-            You will not be able to move on to the next section until you have chosen a candidate for the current section<br></br>
+            You will not be able to move on to the next section until you have chosen a candidate for the current section
+        </p>
+        <p className='instructions'>
             Once you complete the last section of the ballot, you will be able to review/edit all your selections.
             
         </p>
