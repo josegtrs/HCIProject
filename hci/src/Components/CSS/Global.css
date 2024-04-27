@@ -59,7 +59,7 @@ body {
     height: 80px;
     color: #fff;
     background: #0073CF; 
-    border: 3px solid;
+    border: 3px solid black;
     border-radius: 50px;
     font-size: 35px;
     font-weight: 700;
@@ -75,6 +75,7 @@ body {
   position: fixed;
   top: 25px;
   right: 10px;
+  z-index: 9999;
 }
 
 .zoom-button {
@@ -87,6 +88,9 @@ body {
   background-color: orange;
   border-radius: 50%;
   color: white;
+  border: 3px solid black; /* Add border and adjust color as needed */
+
+  
 }
 
 .zoom-button:hover {
@@ -119,6 +123,7 @@ body {
   border: none;
   font-weight: bold;
   background-color: orange;
+  border: 3px solid black; /* Add border and adjust color as needed */
   border-radius: 50%;
   color: black;
   margin: 10px;
@@ -127,6 +132,8 @@ body {
     background-size: 60%; /* Adjust the size of the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center; /* Center the background image */
+    z-index: 9999;
+
 }
 
 .back-button:hover {
@@ -134,12 +141,15 @@ body {
 }
 
 .progress-bar {
-    width: 100%;
+    width: 99.5%;
     background-color: #e0e0e0;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden; /* Ensures the fill doesn't spill outside the border-radius */
     position: fixed; /* Required for positioning the text */
     z-index: 9999;
+    margin-top: 5px;
+    margin-left: 3px;
+
   }
   
   .progress-bar-fill {
@@ -159,3 +169,71 @@ body {
     width: 100%; /* Take full width of the bar */
     text-align: center; /* Align the text to the center */
   }
+
+  .review-container {
+    width: 900px; /* Adjust the width as needed */
+  }
+
+  .review-item {
+      display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Add some spacing between items */
+    border-radius: 30px; /* Add border radius */
+    border: 2px solid black; /* Add border and adjust color as needed */
+    padding: 10px; /* Add padding to separate text from border */
+    padding-left: 20px;
+    padding-right: 20px;
+
+    
+  }
+  
+  .review-item p {
+    flex: 1; /* Take remaining space */
+    margin-right: 10px; /* Add some spacing between paragraph and button */
+  }
+
+  .edit-button {
+    padding: 20px; /* Adjust padding */
+    font-size: 20px; /* Adjust font size */
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    background-color: orange;
+    border-radius: 50%;
+    color: black;
+    margin-left: 10px; /* Add margin to separate from paragraph */
+    background-image: url('../Assets/edit.png'); /* Add path to your edit icon */
+    background-size: 60%; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the background image */
+  }
+  
+  .edit-button:hover {
+    background-color: #c07d00; /* Change color on hover */
+  }
+
+  .instructions-container {
+    width: 900px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.instruction-sub-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.instruction-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.instructions {
+  font-size: 20px;
+}
+

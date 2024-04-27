@@ -47,13 +47,13 @@ const handleCandidateSelect = (candidateName) => {
 return (
   <div>
         <ProgressBar percentage={20} /> 
-        <BackButton destination="/letsvotepage" />
+        <BackButton destination="/instructions" />
         <ZoomComponent zoomIn={zoomIn} zoomOut={zoomOut}/>
         <div style={{transform: `scale(${zoomLevel/100})`}} className='container'>
         <header className="main-header">
           <h1>PRESIDENTIAL</h1>
         </header>
-        <p className="sub-header">Electors for President and Vice President (Vote for one)</p>
+        <p className="sub-header">Electors for President & Vice President (Vote for one)</p>
 
       <VotingBox
         title="PRESIDENT AND VICE PRESIDENT"
