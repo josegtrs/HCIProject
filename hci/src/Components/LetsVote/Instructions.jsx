@@ -75,7 +75,7 @@ export const Instructions = () => {
         </div>
         </div>
         <div className="submit-container">
-            <div style= {{width: '600px'}} className= "submit-button" onClick={handleHomePageClick}>Let's Vote!</div>
+            <div style= {{width: '600px'}} className= "submit-button" onClick={handleHomePageClick}>Begin Voting</div>
         </div>
         </div>
         </div>
