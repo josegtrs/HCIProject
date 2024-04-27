@@ -13,6 +13,7 @@ import { Criminal } from './Components/VotingPage/Criminal';
 import { Civil } from './Components/VotingPage/Civil';
 import { Review } from './Components/FinishPage/Review';
 import { StraightParty } from './Components/VotingPage/StraightParty';
+import { Instructions } from './Components/LetsVote/Instructions'
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<LetsVote />} />
         <Route path="/letsvotepage" element={<LetsVote />} />
+        <Route path="/instructions" element={<Instructions/>} />
         <Route path="/straightparty" element={<StraightParty />} />
         <Route path="/presidential" element={<Presidential />} />
         <Route path="/finishpage" element={<FinishPage />} />
